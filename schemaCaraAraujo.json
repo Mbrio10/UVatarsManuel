@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "caraAraujo": {
+        "type": "object",
+        "properties": {
+          "bocaAraujo": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "narizAraujo": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "peloAraujo": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "ojosAraujo": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "orejaDAraujo": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "orejaIAraujo": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          }
+        },
+        "required": [
+          "bocaAraujo",
+          "narizAraujo",
+          "peloAraujo",
+          "ojosAraujo",
+          "orejaDAraujo",
+          "orejaIAraujo"
+        ]
+      }
+    },
+    "required": [
+      "caraAraujo"
+    ]
+  }

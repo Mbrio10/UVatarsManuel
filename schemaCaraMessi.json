@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "caraMessi": {
+        "type": "object",
+        "properties": {
+          "bocaMessi": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "narizMessi": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "peloMessi": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "ojosMessi": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "orejaDMessi": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "orejaIMessi": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          }
+        },
+        "required": [
+          "bocaMessi",
+          "narizMessi",
+          "peloMessi",
+          "ojosMessi",
+          "orejaDMessi",
+          "orejaIMessi"
+        ]
+      }
+    },
+    "required": [
+      "caraMessi"
+    ]
+  }

@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "caraPedri": {
+        "type": "object",
+        "properties": {
+          "bocaPedri": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "narizPedri": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "peloPedri": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "ojosPedri": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "orejaDPedri": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "orejaIPedri": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          }
+        },
+        "required": [
+          "bocaPedri",
+          "narizPedri",
+          "peloPedri",
+          "ojosPedri",
+          "orejaDPedri",
+          "orejaIPedri"
+        ]
+      }
+    },
+    "required": [
+      "caraPedri"
+    ]
+  }

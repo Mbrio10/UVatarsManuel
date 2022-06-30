@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <meta charset="UTF-8">
+    <!--<script src="./add/vue.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.common.js" integrity="sha512-Ulu6dXRT7lUgoY8Ci05sXO4f2K409+sq8Vm0FgJqaaNYIO5drnMWxlChdm9ZM+vWJlsGW1/peXKUm4+qNoGX8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <link type="text/css" rel="stylesheet" href="./add/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- <link type="text/css" rel="stylesheet" href="./add/bootstrap-vue.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.css" integrity="sha512-YnP4Ql71idaMB+/ZG38+1adSSQotdqvixQ+dQg8x/IFA4heIj6i0BC31W5T5QUdK1Uuwa01YdqdcT42q+RldAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <script src="./add/polyfill.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.43/polyfill.min.js" integrity="sha512-lvWiOP+aMKHllm4THsjzNleVuGOh0WGniJ3lgu/nvCbex1LlaQSxySUjAu/LTJw9FhnSL/PVYoQcckg1Q03+fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+    <!-- <script src="./add/bootstrap-vue.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.js" integrity="sha512-Z0dNfC81uEXC2iTTXtE0rM18I3ATkwn1m8Lxe0onw/uPEEkCmVZd+H8GTeYGkAZv50yvoSR5N3hoy/Do2hNSkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <style>
+            .todo{
+                background-color: rgb(229, 253, 152);
+            }
+            .titulo{
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 10px;
+                    box-shadow: .5em .5em .5em rgb(0, 0, 0);
+                    border-radius: 1em;
+                    width: 12%;
+                    background-color: aliceblue;
+
+                
+            }
+
+            .aleatorio{
+                position: absolute;
+                left: 20px;
+                top: 100px;
+            }
+            .limpiar{
+                position: absolute;
+                left: 20px;
+                top: 150px;
+            }
+            .caras{
+                position: absolute;
+                left: 150px;
+                top: 100px;
+            }
+            .opciones{
+                position: absolute;
+                left: -40px;
+                
+            }
+            .bocas{
+                position: absolute;
+                left: 250px;
+                top: 100px;
+            }
+            .pelos{
+                position: absolute;
+                left: 350px;
+                top: 100px;
+            }
+            .ojos{
+                position: absolute;
+                left: 450px;
+                top: 100px;
+            }
+            .narices{
+                position: absolute;
+                left: 550px;
+                top: 100px;
+            }
+            .orejasDer{
+                position: absolute;
+                left: 650px;
+                top: 100px;
+            }
+            .orejasIzq{
+                position: absolute;
+                left: 790px;
+                top: 100px;
+            }
+            
+            #pelo{
+                position: absolute;
+                top: 160px;
+                left:1090px;
+            }
+            
+            #ojos{
+                position: absolute;
+                top: 353px;
+                left:1112px;
+            }
+            #nariz{
+                position: absolute;
+                top: 421px;
+                left: 1112px;
+            }
+            #boca{
+                position: absolute;
+                top: 509px;
+                left: 1112px
+            }
+            #orejaD{
+                position: absolute;
+                top: 353px;
+                left: 1389px;
+            }
+            #orejaI{
+                position: absolute;
+                top: 353px;
+                left: 1073px;
+            }
+            
+        </style>
+    </head>
+    <body class="todo">
+        <div id="app">
+                <div class="titulo">
+                    <h1><center>UVatars</center></h1>
+                </div >
+                <!--Estos son todos los botones que llaman a la función para asignar su parte a la variable Random para 
+                que se imprima por pantalla-->
+                <div class="botones">
+                    <!--Boton que llama a la función aleatorio, la cual genera un uvatar aleatorio y se introduce a la 
+                    variable random para que pueda ser impresa por pantalla-->
+                    <button class="aleatorio" v-on:click='Aleatorio'>UVatar Aleatorio</button>  
+                    <button class="limpiar" v-on:click='limpiarUVatar'>Limpiar UVatar</button>
+                    <div class="caras">      
+                    <button v-on:click='Bicho'>Caras</button>
+                        <div class="opciones">
+                            <ul><button @click='botonCaraMessi'><b-img :src="botones.caras.caraMessi"></b-img></button></ul>
+                            <ul><button @click='botonCaraBicho'><b-img :src="botones.caras.caraBicho"></b-img></button></ul>
+                            <ul><button @click='botonCaraPedri'><b-img :src="botones.caras.caraPedri"></b-img></button></ul>
+                            <ul><button @click='botonCaraAraujo'><b-img :src="botones.caras.caraAraujo"></b-img></button></ul>
+                        </div>
+                    </div>
+                    <div class="bocas">      
+                        <button @click=''>Bocas</button>
+                        <div class="opciones">
+                            <ul><button @click='botonBocaMessi'><b-img :src="botones.bocas.bocaMessi"></b-img></button></ul>
+                            <ul><button @click='botonBocaBicho'><b-img :src="botones.bocas.bocaBicho"></b-img></button></ul>
+                            <ul><button @click='botonBocaPedri'><b-img :src="botones.bocas.bocaPedri"></b-img></button></ul>
+                            <ul><button @click='botonBocaAraujo'><b-img :src="botones.bocas.bocaAraujo"></b-img></button></ul>
+                        </div>
+                    </div>   
+                    <div class="pelos">      
+                        <button @click=''>Pelos</button>
+                        <div class="opciones" >
+                            <ul><button @click='botonPeloMessi'><b-img :src="botones.pelos.peloMessi"></b-img></button></ul>
+                            <ul><button @click='botonPeloBicho'><b-img :src="botones.pelos.peloBicho"></b-img></button></ul>
+                            <ul><button @click='botonPeloPedri'><b-img :src="botones.pelos.peloPedri"></b-img></button></ul>
+                            <ul><button @click='botonPeloAraujo'><b-img :src="botones.pelos.peloAraujo"></b-img></button></ul>
+                        </div>
+                    </div> 
+                    <div class="ojos">      
+                        <button @click=''>Ojos</button>
+                        <div class="opciones" >
+                            <ul><button @click='botonOjosMessi'><b-img :src="botones.ojos.ojosMessi"></b-img></button></ul>
+                            <ul><button @click='botonOjosBicho'><b-img :src="botones.ojos.ojosBicho"></b-img></button></ul>
+                            <ul><button @click='botonOjosPedri'><b-img :src="botones.ojos.ojosPedri"></b-img></button></ul>
+                            <ul><button @click='botonOjosAraujo'><b-img :src="botones.ojos.ojosAraujo"></b-img></button></ul>
+                        </div>
+                    </div> 
+                    
+                    <div class="narices">      
+                        <button @click=''>Narices</button>
+                        <div class="opciones">
+                            <ul><button @click='botonNarizMessi'><b-img :src="botones.narices.narizMessi"></b-img></button></ul>
+                            <ul><button @click='botonNarizBicho'><b-img :src="botones.narices.narizBicho"></b-img></button></ul>
+                            <ul><button @click='botonNarizPedri'><b-img :src="botones.narices.narizPedri"></b-img></button></ul>
+                            <ul><button @click='botonNarizAraujo'><b-img :src="botones.narices.narizAraujo"></b-img></button></ul>
+                        </div>
+                    </div> 
+                      
+                    <div class="orejasDer">      
+                        <button @click=''>Orejas derecha</button>
+                        <div class="opciones">
+                            <ul><button @click='botonOrejaDMessi'><b-img :src="botones.orejasD.orejaDMessi"></b-img></button></ul>
+                            <ul><button @click='botonOrejaDBicho'><b-img :src="botones.orejasD.orejaDBicho"></b-img></button></ul>
+                            <ul><button @click='botonOrejaDPedri'><b-img :src="botones.orejasD.orejaDPedri"></b-img></button></ul>
+                            <ul><button @click='botonOrejaDAraujo'><b-img :src="botones.orejasD.orejaDAraujo"></b-img></button></ul>
+                        </div>
+                    </div>
+                    
+                    <div class="orejasIzq">      
+                        <button @click=''>Orejas izquierda</button>
+                        <div class="opciones">
+                            <ul><button @click='botonOrejaIMessi'><b-img :src="botones.orejasI.orejaIMessi"></b-img></button></ul>
+                            <ul><button @click='botonOrejaIBicho'><b-img :src="botones.orejasI.orejaIBicho"></b-img></button></ul>
+                            <ul><button @click='botonOrejaIPedri'><b-img :src="botones.orejasI.orejaIPedri"></b-img></button></ul>
+                            <ul><button @click='botonOrejaIAraujo'><b-img :src="botones.orejasI.orejaIAraujo"></b-img></button></ul>
+                        </div>
+                    </div>
+                        
+                </div>
+                <!--Imprimo las imagenes guardadas en la variable random del data de vue-->
+                <div class="imagenes">
+                    <b-img id="pelo" :src="Random.pelo.foto"></b-img>
+                    <b-img id="ojos" :src="Random.ojos.foto"></b-img>
+                    <b-img id="nariz" :src="Random.nariz.foto"></b-img>
+                    <b-img id="boca" :src="Random.boca.foto"></b-img>
+                    <b-img id="orejaD" :src="Random.orejaD.foto"></b-img>
+                    <b-img id="orejaI" :src="Random.orejaI.foto"></b-img>
+                </div>
+            
+        </div>
+        <script>
+            
+
+            let app = new Vue({
+            el: '#app',
+            components: {
+
+            },
+            data: {
+                titulo:"UVatars",
+                BotonAleatorio:"Cara aleatoria",
+                botones:{
+                    botonAleatorio:"UVatar aleatorio",
+                    botonCaras:"Caras",
+                    botonBocas:"Bocas",
+                    botonPelos:"Pelos",
+                    botonNarices:"Narices",
+                    botonOrejasD:"Orejas derecha",
+                    botonOrejasI:"Orejas izquierda"
+                },
+                //imagenes de los distintos botones utilizados para elegir las partes 
+                botones:{
+                    caras:{
+                        caraMessi: "./botones/cara_messi.png",
+                        caraBicho: "./botones/cara_bicho.jpg",
+                        caraPedri: "./botones/cara_pedri.jpg",
+                        caraAraujo: "./botones/cara_araujo.jpg"
+                    },
+                    bocas:{
+                        bocaMessi: "./botones/boca_messi.png",
+                        bocaBicho: "./botones/boca_bicho.jpg",
+                        bocaPedri: "./botones/boca_peddri.jpg",
+                        bocaAraujo: "./botones/boca_araujo.jpg",
+                    },
+                    pelos:{
+                        peloMessi:"./botones/pelo_messi.png",
+                        peloBicho:"./botones/pelo_bicho.jpg",
+                        peloPedri:"./botones/pelo_pedri.jpg",
+                        peloAraujo:"./botones/pelo_araujo.jpg",
+                    },
+                    ojos:{
+                        ojosMessi:"./botones/ojos_messi.png",
+                        ojosBicho:"./botones/ojos_bicho.jpg",
+                        ojosPedri:"./botones/ojos_pedri.jpg",
+                        ojosAraujo:"./botones/ojos_araujo.jpg",
+                    },
+                    narices:{
+                        narizMessi:"./botones/nariz_messi.png",
+                        narizBicho:"./botones/nariz_bicho.jpg",
+                        narizPedri:"./botones/nariz_pedri.jpg",
+                        narizAraujo:"./botones/nariz_araujo.jpg",
+
+                    },
+                    orejasD:{
+                        orejaDMessi:"./botones/orejaD_messi.png",
+                        orejaDBicho:"./botones/orejaD_bicho.jpg",
+                        orejaDPedri:"./botones/orejaD_pedri.jpg",
+                        orejaDAraujo:"./botones/orejaD_araujo.jpg",
+                    },
+                    orejasI:{
+                        orejaIMessi:"./botones/orejaI_messi.png",
+                        orejaIBicho:"./botones/orejaI_bicho.jpg",
+                        orejaIPedri:"./botones/orejaI_pedri.jpg",
+                        orejaIAraujo:"./botones/orejaI_araujo.jpg",
+                    },
+                },
+                //Variable en la que meto todas las partes que quiero imprimir por pantalla
+                Random:{
+                    ojos: {
+                        foto:"",
+                    },
+                    boca: {
+                        foto:"",
+                    },
+                    pelo: {
+                        foto:"",
+                    },
+                    nariz: {
+                        foto:"",
+                    },
+                    orejaD: {
+                        foto:"",
+                    },
+                    orejaI: {
+                        foto:"",
+                    }
+                },
+                //Variables en las que meto los json de las distintas caras
+                caraBICHO: {
+                    boca:"",
+                    pelo:"",
+                    ojos:"",
+                    nariz:"",
+                    orejaD:"",
+                    orejaI:""
+                },
+                caraMESSI: {
+                    boca:"",
+                    pelo:"",
+                    ojos:"",
+                    nariz:"",
+                    orejaD:"",
+                    orejaI:""
+                },
+                caraPEDRI: {
+                    boca:"",
+                    pelo:"",
+                    ojos:"",
+                    nariz:"",
+                    orejaD:"",
+                    orejaI:""
+                },
+                caraARAUJO: {
+                    boca:"",
+                    pelo:"",
+                    ojos:"",
+                    nariz:"",
+                    orejaD:"",
+                    orejaI:""
+                },
+                
+            },
+            methods: {
+
+                //Función para obtener el json de Messi generado por la API y subido al http, el json se obtiene del http mediante
+                //axios
+                Bicho(){
+                    const vm = this
+                axios.get('http://localhost:8080/caraBicho')
+                .then((response) => {
+                    //alert(JSON.stringify(response.data))
+                    vm.caraBICHO.boca = response.data.caraCristiano.bocaBicho.foto
+                    vm.caraBICHO.pelo = response.data.caraCristiano.peloBicho.foto
+                    vm.caraBICHO.ojos = response.data.caraCristiano.ojosBicho.foto
+                    vm.caraBICHO.nariz = response.data.caraCristiano.narizBicho.foto
+                    vm.caraBICHO.orejaD = response.data.caraCristiano.orejaDBicho.foto
+                    vm.caraBICHO.orejaI = response.data.caraCristiano.orejaIBicho.foto
+                })
+
+                },
+                //Función para obtener el json de Messi generado por la API y subido al http, el json se obtiene del http mediante
+                //axios
+                Messi(){
+                    const vm = this
+                axios.get('http://localhost:8080/caraMessi')
+                .then((response) => {
+                    //alert(JSON.stringify(response.data))
+                    vm.caraMESSI.boca = response.data.caraMessi.bocaMessi.foto
+                    vm.caraMESSI.pelo = response.data.caraMessi.peloMessi.foto
+                    vm.caraMESSI.ojos = response.data.caraMessi.ojosMessi.foto
+                    vm.caraMESSI.nariz = response.data.caraMessi.narizMessi.foto
+                    vm.caraMESSI.orejaD = response.data.caraMessi.orejaDMessi.foto
+                    vm.caraMESSI.orejaI = response.data.caraMessi.orejaIMessi.foto
+                })
+                
+                },
+                //Función para obtener el json de Pedri generado por la API y subido al http, el json se obtiene del http mediante
+                //axios
+                Pedri(){
+                    const vm = this
+                axios.get('http://localhost:8080/caraPedri')
+                .then((response) => {
+                    //alert(JSON.stringify(response.data))
+                    vm.caraPEDRI.boca = response.data.caraPedri.bocaPedri.foto
+                    vm.caraPEDRI.pelo = response.data.caraPedri.peloPedri.foto
+                    vm.caraPEDRI.ojos = response.data.caraPedri.ojosPedri.foto
+                    vm.caraPEDRI.nariz = response.data.caraPedri.narizPedri.foto
+                    vm.caraPEDRI.orejaD = response.data.caraPedri.orejaDPedri.foto
+                    vm.caraPEDRI.orejaI = response.data.caraPedri.orejaIPedri.foto
+                })
+                
+                },
+                //Función para obtener el json de araujo generado por la API y subido al http, el json se obtiene del http mediante
+                //axios
+                Araujo(){
+                    const vm = this
+                axios.get('http://localhost:8080/caraAraujo')
+                .then((response) => {
+                    vm.caraARAUJO.boca = response.data.caraAraujo.bocaAraujo.foto
+                    vm.caraARAUJO.pelo = response.data.caraAraujo.peloAraujo.foto
+                    vm.caraARAUJO.ojos = response.data.caraAraujo.ojosAraujo.foto
+                    vm.caraARAUJO.nariz = response.data.caraAraujo.narizAraujo.foto
+                    vm.caraARAUJO.orejaD = response.data.caraAraujo.orejaDAraujo.foto
+                    vm.caraARAUJO.orejaI = response.data.caraAraujo.orejaIAraujo.foto
+                })
+                
+                },
+                
+                //Función para obtener el json aleatorio generado por la API y subido al http, el json se obtiene del http mediante
+                //axios
+                Aleatorio(){
+                    const vm = this
+                axios.get('http://localhost:8080/Aleatorio')
+                .then((response) => {
+                    vm.Random.boca.foto = response.data.bocas.foto
+                    vm.Random.pelo.foto = response.data.pelos.foto
+                    vm.Random.ojos.foto = response.data.ojos.foto
+                    vm.Random.nariz.foto = response.data.narices.foto
+                    vm.Random.orejaD.foto = response.data.orejasD.foto
+                    vm.Random.orejaI.foto = response.data.orejasI.foto
+                })
+                },
+                limpiarUVatar(){
+                    this.Random.boca.foto=""
+                    this.Random.pelo.foto=""
+                    this.Random.ojos.foto=""
+                    this.Random.nariz.foto=""
+                    this.Random.orejaD.foto=""
+                    this.Random.orejaI.foto=""
+                },
+                
+                //Funciones para asignar a la variable Random las distintas bocas
+                botonBocaMessi(){
+                    this.Random.boca.foto = this.caraMESSI.boca
+                },
+                botonBocaBicho(){
+                    this.Random.boca.foto = this.caraBICHO.boca
+                }, 
+                botonBocaPedri(){
+                    this.Random.boca.foto = this.caraPEDRI.boca
+                },
+                botonBocaAraujo(){
+                    this.Random.boca.foto = this.caraARAUJO.boca
+                },
+                //Funciones para asignar a la variable Random los distintos pelos
+                botonPeloMessi(){
+                    this.Random.pelo.foto = this.caraMESSI.pelo
+                },
+                botonPeloBicho(){
+                    this.Random.pelo.foto = this.caraBICHO.pelo
+                },
+                botonPeloPedri(){
+                    this.Random.pelo.foto = this.caraPEDRI.pelo
+                },
+                botonPeloAraujo(){
+                    this.Random.pelo.foto = this.caraARAUJO.pelo
+                }, 
+                //Funciones para asignar a la variable Random los distintos ojos
+                botonOjosMessi(){
+                    this.Random.ojos.foto = this.caraMESSI.ojos
+                },
+                botonOjosBicho(){
+                    this.Random.ojos.foto = this.caraBICHO.ojos
+                },
+                botonOjosPedri(){
+                    this.Random.ojos.foto = this.caraPEDRI.ojos
+                },
+                botonOjosAraujo(){
+                    this.Random.ojos.foto = this.caraARAUJO.ojos
+                }, 
+                //Funciones para asignar a la variable Random las distintas narices
+                botonNarizMessi(){
+                    this.Random.nariz.foto = this.caraMESSI.nariz
+                },
+                botonNarizBicho(){
+                    this.Random.nariz.foto = this.caraBICHO.nariz
+                },
+                botonNarizPedri(){
+                    this.Random.nariz.foto = this.caraPEDRI.nariz
+                },
+                botonNarizAraujo(){
+                    this.Random.nariz.foto = this.caraARAUJO.nariz
+                },
+                //Funciones para asignar a la variable Random las distintas orejas derechas
+                botonOrejaDMessi(){
+                    this.Random.orejaD.foto = this.caraMESSI.orejaD
+                }, 
+                botonOrejaDBicho(){
+                    this.Random.orejaD.foto = this.caraBICHO.orejaD
+                }, 
+                botonOrejaDPedri(){
+                    this.Random.orejaD.foto = this.caraPEDRI.orejaD
+                }, 
+                botonOrejaDAraujo(){
+                    this.Random.orejaD.foto = this.caraARAUJO.orejaD
+                }, 
+                //Funciones para asignar a la variable Random las distintas orejas izquierdas
+                botonOrejaIMessi(){
+                    this.Random.orejaI.foto = this.caraMESSI.orejaI
+                }, 
+                botonOrejaIBicho(){
+                    this.Random.orejaI.foto = this.caraBICHO.orejaI
+                }, 
+                botonOrejaIPedri(){
+                    this.Random.orejaI.foto = this.caraPEDRI.orejaI
+                }, 
+                botonOrejaIAraujo(){
+                    this.Random.orejaI.foto = this.caraARAUJO.orejaI
+                },
+                //Asigna a la variable random las distintas partes de la cara de Messi
+                botonCaraMessi(){
+                    this.Random.pelo.foto = this.caraMESSI.pelo
+                    this.Random.ojos.foto = this.caraMESSI.ojos
+                    this.Random.boca.foto = this.caraMESSI.boca
+                    this.Random.nariz.foto = this.caraMESSI.nariz
+                    this.Random.orejaD.foto = this.caraMESSI.orejaD
+                    this.Random.orejaI.foto = this.caraMESSI.orejaI
+                },
+                //Asigna a la variable random las distintas partes de la cara de Cristiano
+                botonCaraBicho(){
+                    this.Random.pelo.foto = this.caraBICHO.pelo
+                    this.Random.ojos.foto = this.caraBICHO.ojos
+                    this.Random.boca.foto = this.caraBICHO.boca
+                    this.Random.nariz.foto = this.caraBICHO.nariz
+                    this.Random.orejaD.foto = this.caraBICHO.orejaD
+                    this.Random.orejaI.foto = this.caraBICHO.orejaI
+                },
+                //Asigna a la variable random las distintas partes de la cara de Pedri
+                botonCaraPedri(){
+                    this.Random.pelo.foto = this.caraPEDRI.pelo
+                    this.Random.ojos.foto = this.caraPEDRI.ojos
+                    this.Random.boca.foto = this.caraPEDRI.boca
+                    this.Random.nariz.foto = this.caraPEDRI.nariz
+                    this.Random.orejaD.foto = this.caraPEDRI.orejaD
+                    this.Random.orejaI.foto = this.caraPEDRI.orejaI
+                },
+                //Asigna a la variable random las distintas partes de la cara de Araujo
+                botonCaraAraujo(){
+                    this.Random.pelo.foto = this.caraARAUJO.pelo
+                    this.Random.ojos.foto = this.caraARAUJO.ojos
+                    this.Random.boca.foto = this.caraARAUJO.boca
+                    this.Random.nariz.foto = this.caraARAUJO.nariz
+                    this.Random.orejaD.foto = this.caraARAUJO.orejaD
+                    this.Random.orejaI.foto = this.caraARAUJO.orejaI
+                },
+            },   
+            //lamadas a las funciones en mounted para que se ejecuten al iniciar la aplicación web
+            mounted(){
+                this.Bicho();
+                this.Messi();
+                this.Araujo();
+                this.Pedri();
+            }
+        })
+            
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{
+    "$schema": "./schemaCaraAraujo.json",
+    "caraAraujo":{
+        "bocaAraujo":{
+            "foto":"./recortes/boca_araujo.jpg"
+        },
+        "narizAraujo":{
+            "foto":"/recortes/nariz_araujo.jpg"
+        },
+        "peloAraujo":{
+            "foto":"/recortes/pelo_araujo.jpg"
+        },
+        "ojosAraujo":{
+            "foto":"/recortes/ojos_araujo.jpg"
+        },
+        "orejaDAraujo":{
+            "foto":"/recortes/orejaD_araujo.jpg"
+        },
+        "orejaIAraujo":{
+            "foto":"/recortes/orejaI_araujo.jpg"
+        }
+    }
+}

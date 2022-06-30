@@ -1,0 +1,23 @@
+{
+    "$schema":"./schemaCaraBicho.json",
+    "caraCristiano":{
+        "bocaBicho":{
+            "foto":"./recortes/boca_Bicho.jpg"
+        },
+        "narizBicho":{
+            "foto":"./recortes/nariz_Bicho.jpg"
+        },
+        "peloBicho":{
+            "foto":"./recortes/pelo_Bicho.jpg"
+        },
+        "ojosBicho":{
+            "foto":"./recortes/ojos_Bicho.jpg"
+        },
+        "orejaDBicho":{
+            "foto":"./recortes/orejaD_Bicho.jpg"
+        },
+        "orejaIBicho":{
+            "foto":"./recortes/orejaI_Bicho.jpg"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "$schema": "./schemaUVatars.json",
+    "bocas": [
+        {
+            "foto":"./recortes/boca_bicho.jpg"
+        },
+        {
+            "foto":"./recortes/boca_araujo.jpg"
+        },
+        {
+            "foto":"./recortes/boca_messi.png"
+        },
+        {
+            "foto":"./recortes/boca_peddri.jpg"
+        }
+
+    ],
+    "narices": [
+        {
+            "foto":"./recortes/nariz_bicho.jpg"
+        },
+        {
+            "foto":"./recortes/nariz_araujo.jpg"
+        },
+        {
+            "foto":"./recortes/nariz_messi.png"
+        },
+        {
+            "foto":"./recortes/nariz_pedri.jpg"
+        }
+
+    ],
+    "ojos":[
+        {
+            "foto":"./recortes/ojos_bicho.jpg"
+        },
+        {
+            "foto":"./recortes/ojos_araujo.jpg"
+        },
+        {
+            "foto":"./recortes/ojos_messi.png"
+        },
+        {
+            "foto":"./recortes/ojos_pedri.jpg"
+        }
+    ],
+    "pelos":[
+        {
+            "foto":"./recortes/pelo_bicho.jpg"
+        },
+        {
+            "foto":"./recortes/pelo_araujo.jpg"
+        },
+        {
+            "foto":"./recortes/pelo_messi.png"
+        },
+        {
+            "foto":"./recortes/pelo_pedri.jpg"
+        }
+
+    ],
+    "orejasI":[
+        {
+            "foto":"./recortes/orejaI_bicho.jpg"
+        },
+        {
+            "foto":"./recortes/orejaI_araujo.jpg"
+        },
+        {
+            "foto":"./recortes/orejaI_messi.png"
+        },
+        {
+            "foto":"./recortes/orejaI_pedri.jpg"
+        }
+
+    ],
+
+    "orejasD":[
+        {
+            "foto":"./recortes/orejaD_bicho.jpg"
+        },
+        {
+            "foto":"./recortes/orejaD_araujo.jpg"
+        },
+        {
+            "foto":"./recortes/orejaD_messi.png"
+        },
+        {
+            "foto":"./recortes/orejaD_pedri.jpg"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "$schema": "./schemaCaraMessi.json",
+    "caraMessi":{
+        "bocaMessi":{
+            "foto":"/recortes/boca_Messi.png"
+        },
+        "narizMessi":{
+            "foto":"/recortes/nariz_Messi.png"
+
+        },
+        "peloMessi":{
+            "foto":"/recortes/pelo_Messi.png"
+
+        },
+        "ojosMessi":{
+            "foto":"/recortes/ojos_Messi.png"
+
+        },
+        "orejaDMessi":{
+            "foto":"/recortes/orejaD_Messi.png"
+
+        },
+        "orejaIMessi":{
+            "foto":"/recortes/orejaI_Messi.png"
+
+        }
+    }
+}

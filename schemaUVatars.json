@@ -1,0 +1,308 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "bocas": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          }
+        ]
+      },
+      "narices": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          }
+        ]
+      },
+      "ojos": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          }
+        ]
+      },
+      "pelos": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          }
+        ]
+      },
+      "orejasI": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          }
+        ]
+      },
+      "orejasD": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "bocas",
+      "narices",
+      "ojos",
+      "pelos",
+      "orejasI",
+      "orejasD"
+    ]
+  }

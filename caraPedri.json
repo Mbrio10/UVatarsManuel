@@ -1,0 +1,23 @@
+{
+    "$schema": "./schemaCaraPedri.json",
+    "caraPedri":{
+        "bocaPedri":{
+            "foto":"/recortes/boca_Peddri.jpg"
+        },
+        "narizPedri":{
+            "foto":"/recortes/nariz_Pedri.jpg"
+        },
+        "peloPedri":{
+            "foto":"/recortes/pelo_Pedri.jpg"
+        },
+        "ojosPedri":{
+            "foto":"/recortes/ojos_Pedri.jpg"
+        },
+        "orejaDPedri":{
+            "foto":"/recortes/orejaD_Pedri.jpg"
+        },
+        "orejaIPedri":{
+            "foto":"/recortes/orejaI_Pedri.jpg"
+        }
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "caraCristiano": {
+        "type": "object",
+        "properties": {
+          "bocaBicho": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "narizBicho": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "peloBicho": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "ojosBicho": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "orejaDBicho": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          },
+          "orejaIBicho": {
+            "type": "object",
+            "properties": {
+              "foto": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "foto"
+            ]
+          }
+        },
+        "required": [
+          "bocaBicho",
+          "narizBicho",
+          "peloBicho",
+          "ojosBicho",
+          "orejaDBicho",
+          "orejaIBicho"
+        ]
+      }
+    },
+    "required": [
+      "caraCristiano"
+    ]
+  }
